@@ -9,7 +9,7 @@ use App\User;
 class RegistrationController extends Controller
 {
     public function create(){
-        return view('sessions.create');
+        return view('registration.create');
     }
 
     public function store(){
@@ -32,7 +32,7 @@ class RegistrationController extends Controller
         auth()->login($user);
 
 
-        // Da na kraju redirektujemo kao home strani ili nekoj drugoj
+        // Da na kraju redirektujemo ka home strani ili nekoj drugoj
 
         return redirect()->home();
 

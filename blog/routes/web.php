@@ -18,7 +18,7 @@ Route::get('/blogy/create','BlogiesController@create');
 
 Route::get('/blogy/{post}','BlogiesController@show');
 
-Route::post('/posts','BlogiesController@store');
+Route::post('/blogy','BlogiesController@store');
 
 
 Route::post('/blogy/{post}/comments', 'CommentsController@store');
@@ -33,5 +33,7 @@ Route::post('/register','RegistrationController@store');
 
 
 Route::get('/login','SessionsController@create');
+
+Route::post('/login','SessionsController@store');
 
 Route::get('/logout','SessionsController@destroy');

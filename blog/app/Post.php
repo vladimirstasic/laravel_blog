@@ -21,4 +21,16 @@ class Post extends Model
         $this->comments()->create(compact('body'));
 
     }
+
+    public function scopreFilter($query, $filters)
+    {
+    	if ($month = request('month')){
+    		$posts->whereMonth('created_at', Carbon::parse($month)->month);
+    	}
+
+    	if ($year = request('year')){
+    		$posts->whereYear('created_at', $year);
+    	}
+
+    }
 }

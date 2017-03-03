@@ -9,7 +9,7 @@
 
         <hr>
 
-        <form method="post" action="/posts">
+        <form method="post" action="/blogy">
 
             {{ csrf_field() }}
 

@@ -49,7 +49,7 @@ return [
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
-            'strict' => true,
+            'strict' => false,// ja updateovao 3.3.2017 11:41AM zbog errora za user_id
             'engine' => null,
         ],
 
