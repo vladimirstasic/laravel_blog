@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Post;
 
+
 class BlogiesController extends Controller
 {
 
@@ -17,9 +18,13 @@ class BlogiesController extends Controller
     public function index()
     {
 
-        $posts = Post::latest()->get();
+        $posts = Post::latest()
+            ->filter(request(['month', 'year']))
+            ->get();
+
 
         return view('blogy.index', compact('posts'));
+
     }
 
     public function show(Post $post)
